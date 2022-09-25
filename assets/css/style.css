@@ -72,18 +72,21 @@ section {
 }
 
 article img {
-   border: 5px solid var(--seconday);
+    border: 5px solid var(--seconday);    
+    filter: grayscale(80%);
+    width: 100%;
 }
+/* article img {
+    border: 5px solid var(--seconday);    
+    position: absolute;
+    
+    width: 100%;
+} */
 
 section ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-article img {
-    max-width: 100;
-    max-height: auto;
 }
 
 footer {
@@ -101,6 +104,10 @@ footer ul li{
 
 a {
     font-size: 20px;
+}
+
+h4 {
+    font-size: 30px;
 }
 
 p {
@@ -129,12 +136,23 @@ p {
     text-align: right;
 }
 
+.picture {
+    position: relative;
+    width: 50%;
+    padding: var(--space);
+}
+
+.text {
+    position: absolute;
+    bottom: 10%;
+    right: 2.5%;
+}
+
 #about-me {
     font-size: var(--size);
 }
 
 #work {
-    margin-top: 100px;
     font-size: var(--size);
 }
 
@@ -146,3 +164,11 @@ p {
 header ul li a:hover, footer ul li p:hover {
     color: var(--seconday);
 }
+
+article img:hover {
+    filter: none;    
+    box-shadow: 5px 5px 2px var(--primary);
+
+}
+
+/* animation */
